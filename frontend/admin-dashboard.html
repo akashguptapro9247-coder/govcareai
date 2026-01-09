@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - GovCareAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <script src="js/admin-dashboard.js" defer></script>
+</head>
+<body class="admin-dashboard">
+    <!-- Header -->
+    <header>
+        <button class="nav-button" onclick="window.location.href='index.html'">HOME</button>
+        <h1 class="logo">GovCareAI</h1>
+        <div style="display: flex; gap: 10px;">
+            <button class="nav-button" onclick="window.location.href='settings.html'" title="Settings">⚙️</button>
+            <button class="nav-button" onclick="Auth.handleLogout()">LOGOUT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section scroll-reveal">
+            <h2>ADMIN DASHBOARD — GOVCAREAI</h2>
+            <p>Welcome, System Administrator</p>
+            
+            <!-- Summary Stats - 3x3 Grid -->
+            <div class="stats-grid">
+                <div class="stats-row">
+                    <div class="stat-card glass-panel">
+                        <div class="stat-value stat-high">0</div>
+                        <div class="stat-label">HIGH PRIORITY</div>
+                    </div>
+                    
+                    <div class="stat-card glass-panel">
+                        <div class="stat-value stat-moderate">0</div>
+                        <div class="stat-label">MODERATE PRIORITY</div>
+                    </div>
+                    
+                    <div class="stat-card glass-panel">
+                        <div class="stat-value stat-low">0</div>
+                        <div class="stat-label">LOW PRIORITY</div>
+                    </div>
+                </div>
+                
+                <div class="stats-row">
+                    <div class="stat-card glass-panel">
+                        <div class="stat-value stat-resolved">0</div>
+                        <div class="stat-label">RESOLVED</div>
+                    </div>
+                    
+                    <div class="stat-card glass-panel">
+                        <div class="stat-value stat-progress">0</div>
+                        <div class="stat-label">IN PROGRESS</div>
+                    </div>
+                    
+                    <div class="stat-card glass-panel">
+                        <div class="stat-value stat-pending">0</div>
+                        <div class="stat-label">PENDING</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search and Filter Bar -->
+            <div class="glass-panel" style="margin: 2rem 0;">
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <input type="text" class="form-input" placeholder="Search complaints..." style="flex: 1; min-width: 200px;">
+                    <select id="priority-filter" class="form-input" style="flex: 1; min-width: 150px;">
+                        <option value="">All Priorities</option>
+                        <option value="HIGH">High</option>
+                        <option value="MODERATE">Moderate</option>
+                        <option value="LOW">Low</option>
+                    </select>
+                    <select id="status-filter" class="form-input" style="flex: 1; min-width: 150px;">
+                        <option value="">All Statuses</option>
+                        <option value="PENDING">Pending</option>
+                        <option value="IN PROGRESS">In Progress</option>
+                        <option value="RESOLVED">Resolved</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Complaints List -->
+            <div class="card-grid">
+                <!-- Complaints will be dynamically loaded here -->
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GovCareAI</h3>
+                <p>GovCareAI is a revolutionary platform that uses artificial intelligence to prioritize and manage civic complaints.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@govcareai.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const userType = localStorage.getItem('userType');
+            
+            if (!isLoggedIn || userType !== 'admin') {
+                // Redirect to admin login if not logged in as admin
+                window.location.href = 'admin-login.html';
+            }
+        });
+    </script>
+</body>
+</html>

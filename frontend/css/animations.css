@@ -1,0 +1,354 @@
+/* Animations for GovCareAI */
+
+/* Glow Pulse Animation */
+@keyframes glow-pulse {
+  0% {
+    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+  }
+  25% {
+    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green), 0 0 30px var(--neon-green);
+  }
+  75% {
+    text-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red), 0 0 30px var(--neon-red);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--neon-orange), 0 0 20px var(--neon-orange), 0 0 30px var(--neon-orange);
+  }
+}
+
+/* Electric Glow Animation */
+@keyframes electric-glow {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(0, 243, 255, 0.5),
+      0 0 10px rgba(0, 243, 255, 0.7),
+      0 0 15px rgba(0, 243, 255, 0.8),
+      0 0 20px rgba(0, 180, 255, 0.6),
+      0 0 25px rgba(0, 150, 255, 0.4);
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 
+      0 0 5px rgba(0, 243, 255, 0.6),
+      0 0 15px rgba(0, 243, 255, 0.9),
+      0 0 20px rgba(0, 243, 255, 1),
+      0 0 25px rgba(0, 180, 255, 0.8),
+      0 0 30px rgba(0, 150, 255, 0.6),
+      0 0 35px rgba(0, 100, 255, 0.4);
+    opacity: 0.95;
+  }
+  100% {
+    text-shadow: 
+      0 0 5px rgba(0, 243, 255, 0.5),
+      0 0 10px rgba(0, 243, 255, 0.7),
+      0 0 15px rgba(0, 243, 255, 0.8),
+      0 0 20px rgba(0, 180, 255, 0.6),
+      0 0 25px rgba(0, 150, 255, 0.4);
+    opacity: 1;
+  }
+}
+
+/* Button Glow Animation */
+@keyframes button-glow {
+  0% {
+    box-shadow: 
+      0 0 5px rgba(0, 243, 255, 0.5),
+      0 0 10px rgba(0, 243, 255, 0.7),
+      0 0 15px rgba(0, 243, 255, 0.8);
+  }
+  50% {
+    box-shadow: 
+      0 0 5px rgba(0, 243, 255, 0.6),
+      0 0 15px rgba(0, 243, 255, 0.9),
+      0 0 20px rgba(0, 243, 255, 1),
+      0 0 25px rgba(0, 180, 255, 0.8);
+  }
+  100% {
+    box-shadow: 
+      0 0 5px rgba(0, 243, 255, 0.5),
+      0 0 10px rgba(0, 243, 255, 0.7),
+      0 0 15px rgba(0, 243, 255, 0.8);
+  }
+}
+
+/* Purple Button Glow Animation */
+@keyframes button-glow-purple {
+  0% {
+    box-shadow: 
+      0 0 5px rgba(189, 0, 255, 0.5),
+      0 0 10px rgba(189, 0, 255, 0.7),
+      0 0 15px rgba(189, 0, 255, 0.8);
+  }
+  50% {
+    box-shadow: 
+      0 0 5px rgba(189, 0, 255, 0.6),
+      0 0 15px rgba(189, 0, 255, 0.9),
+      0 0 20px rgba(189, 0, 255, 1),
+      0 0 25px rgba(150, 0, 200, 0.8);
+  }
+  100% {
+    box-shadow: 
+      0 0 5px rgba(189, 0, 255, 0.5),
+      0 0 10px rgba(189, 0, 255, 0.7),
+      0 0 15px rgba(189, 0, 255, 0.8);
+  }
+}
+
+/* Green Button Glow Animation */
+@keyframes button-glow-green {
+  0% {
+    box-shadow: 
+      0 0 5px rgba(0, 255, 157, 0.5),
+      0 0 10px rgba(0, 255, 157, 0.7),
+      0 0 15px rgba(0, 255, 157, 0.8);
+  }
+  50% {
+    box-shadow: 
+      0 0 5px rgba(0, 255, 157, 0.6),
+      0 0 15px rgba(0, 255, 157, 0.9),
+      0 0 20px rgba(0, 255, 157, 1),
+      0 0 25px rgba(0, 200, 130, 0.8);
+  }
+  100% {
+    box-shadow: 
+      0 0 5px rgba(0, 255, 157, 0.5),
+      0 0 10px rgba(0, 255, 157, 0.7),
+      0 0 15px rgba(0, 255, 157, 0.8);
+  }
+}
+
+/* Red Button Glow Animation */
+@keyframes button-glow-red {
+  0% {
+    box-shadow: 
+      0 0 5px rgba(255, 0, 170, 0.5),
+      0 0 10px rgba(255, 0, 170, 0.7),
+      0 0 15px rgba(255, 0, 170, 0.8);
+  }
+  50% {
+    box-shadow: 
+      0 0 5px rgba(255, 0, 170, 0.6),
+      0 0 15px rgba(255, 0, 170, 0.9),
+      0 0 20px rgba(255, 0, 170, 1),
+      0 0 25px rgba(200, 0, 130, 0.8);
+  }
+  100% {
+    box-shadow: 
+      0 0 5px rgba(255, 0, 170, 0.5),
+      0 0 10px rgba(255, 0, 170, 0.7),
+      0 0 15px rgba(255, 0, 170, 0.8);
+  }
+}
+
+/* Gradient Shift Animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Blink Animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sparkle Effect */
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Electric Sparks */
+.electric-spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--neon-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.spark-1 {
+  animation: sparkle 1.5s infinite;
+}
+
+.spark-2 {
+  animation: sparkle 2s infinite 0.5s;
+}
+
+.spark-3 {
+  animation: sparkle 2.5s infinite 1s;
+}
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Page Transition */
+.page-transition {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Particle Animation */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--neon-blue);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.particle.blue {
+  background: var(--neon-blue);
+  box-shadow: var(--glow-blue);
+}
+
+.particle.purple {
+  background: var(--neon-purple);
+  box-shadow: var(--glow-purple);
+}
+
+.particle.green {
+  background: var(--neon-green);
+  box-shadow: var(--glow-green);
+}
+
+.particle.red {
+  background: var(--neon-red);
+  box-shadow: var(--glow-red);
+}
+
+/* Smoke Animation */
+.smoke {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(189, 0, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0;
+  animation: rise 15s infinite;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) scale(5);
+    opacity: 0;
+  }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 243, 255, 0.3);
+  border-top: 4px solid var(--neon-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Button Press Effect */
+.button-press:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,96 @@
+GovCareAI - XAMPP Setup Guide
+==============================
+
+Step-by-step instructions to run GovCareAI locally using XAMPP:
+
+1. INSTALL XAMPP
+   -------------
+   - Download XAMPP from: https://www.apachefriends.org/download.html
+   - Install XAMPP (make sure to include Apache and MySQL components)
+   - No special configuration needed during installation
+
+2. START XAMPP SERVICES
+   --------------------
+   - Open XAMPP Control Panel
+   - Click "Start" for:
+     * Apache
+     * MySQL
+   - Make sure both services show green "Running" status
+
+3. PLACE PROJECT FILES
+   -------------------
+   - Copy the entire "govcareai" folder to:
+     C:\xampp\htdocs\govcareai
+   - After copying, you should have:
+     C:\xampp\htdocs\govcareai\backend\
+     C:\xampp\htdocs\govcareai\frontend\
+     C:\xampp\htdocs\govcareai\database\
+     etc.
+
+4. CREATE DATABASE
+   ---------------
+   - Open your browser and go to:
+     http://localhost/phpmyadmin
+   - In phpMyAdmin:
+     * Click "New" in the left sidebar
+     * Enter database name: "govcareai"
+     * Click "Create"
+   - Select the new "govcareai" database
+   - Click "Import" tab at the top
+   - Click "Choose File" and select:
+     C:\xampp\htdocs\govcareai\database\govcareai.sql
+   - Click "Go" to import the database
+
+5. INSTALL BACKEND DEPENDENCIES
+   ----------------------------
+   - Double-click "start-backend.bat" file
+   - OR open Command Prompt and run:
+     cd C:\xampp\htdocs\govcareai\backend
+     npm install
+   - Wait for installation to complete
+
+6. START BACKEND SERVER
+   --------------------
+   - Double-click "start-backend.bat" file
+   - OR open Command Prompt and run:
+     cd C:\xampp\htdocs\govcareai\backend
+     npm start
+   - You should see "Server is running on port 5000"
+   - Keep this window open while using the website
+
+7. ACCESS THE WEBSITE
+   ------------------
+   - Double-click "open-website.bat" file
+   - OR open your browser and go to:
+     http://localhost/govcareai/frontend/index.html
+
+Default Login Credentials:
+--------------------------
+Citizen Login:
+- Email: (register first)
+- Password: (set during registration)
+
+Admin Login:
+- Email: admin@govcareai.com
+- Password: Admin@123
+
+Troubleshooting:
+----------------
+1. If website doesn't load:
+   - Make sure Apache is running in XAMPP
+   - Check that backend server is running (port 5000)
+   - Verify file paths in htdocs folder
+
+2. If database connection fails:
+   - Ensure MySQL is running in XAMPP
+   - Verify database name is "govcareai"
+   - Check that SQL file was imported correctly
+
+3. If backend won't start:
+   - Make sure Node.js is installed
+   - Check that npm install completed successfully
+   - Look for error messages in the terminal
+
+Need Help?
+----------
+Refer to README.md for detailed documentation

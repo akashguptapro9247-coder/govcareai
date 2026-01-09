@@ -1,0 +1,16 @@
+{
+  "name": "govcareai",
+  "version": "1.0.0",
+  "description": "GovCareAI - AI-powered government complaint management system",
+  "scripts": {
+    "dev": "cd backend && npm run dev",
+    "start": "cd backend && node server.js",
+    "vercel-build": "echo \"Build completed\""
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.12"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -1,0 +1,307 @@
+/* GovCareAI Professional Cyber Background */
+/* Ultra HD 4K Cinematic Government Security Background */
+
+.govcareai-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000000 0%, #00001a 50%, #000033 100%);
+}
+
+/* Base Grid Geometry */
+.grid-geometry {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 100, 150, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 100, 150, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.6;
+}
+
+/* Thin Glowing Circuit Lines */
+.circuit-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, transparent 49.5%, rgba(0, 200, 220, 0.2) 50%, transparent 50.5%),
+    linear-gradient(transparent 49.5%, rgba(0, 200, 220, 0.2) 50%, transparent 50.5%);
+  background-size: 80px 80px;
+  opacity: 0.4;
+  animation: circuit-flow 20s linear infinite;
+}
+
+@keyframes circuit-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+}
+
+/* Subtle Neon Gradients */
+.neon-gradients {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 15% 25%, rgba(0, 200, 220, 0.1) 0%, transparent 30%),
+    radial-gradient(ellipse at 85% 75%, rgba(100, 150, 255, 0.08) 0%, transparent 35%),
+    radial-gradient(ellipse at 40% 60%, rgba(0, 150, 200, 0.06) 0%, transparent 40%);
+  opacity: 0.7;
+}
+
+/* Glass Holographic Textures */
+.holographic-layers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.holo-panel-1 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 350px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(0, 100, 150, 0.1), rgba(100, 150, 255, 0.05));
+  border-radius: 8px;
+  box-shadow: 
+    0 0 30px rgba(0, 200, 220, 0.2),
+    inset 0 0 20px rgba(100, 150, 255, 0.1);
+  transform: skewX(-3deg) rotate(1deg);
+  animation: holo-float-1 25s ease-in-out infinite;
+}
+
+.holo-panel-2 {
+  position: absolute;
+  bottom: 20%;
+  right: 12%;
+  width: 300px;
+  height: 180px;
+  background: linear-gradient(45deg, rgba(100, 150, 255, 0.1), rgba(0, 150, 200, 0.05));
+  border-radius: 12px;
+  box-shadow: 
+    0 0 40px rgba(100, 150, 255, 0.2),
+    inset 0 0 25px rgba(0, 150, 200, 0.1);
+  transform: skewX(3deg) rotate(-2deg);
+  animation: holo-float-2 30s ease-in-out infinite reverse;
+}
+
+.holo-panel-3 {
+  position: absolute;
+  top: 45%;
+  right: 25%;
+  width: 250px;
+  height: 300px;
+  background: linear-gradient(225deg, rgba(0, 150, 200, 0.1), rgba(0, 100, 150, 0.05));
+  border-radius: 6px;
+  box-shadow: 
+    0 0 35px rgba(0, 150, 200, 0.2),
+    inset 0 0 20px rgba(0, 100, 150, 0.1);
+  transform: skewY(-2deg) rotate(1.5deg);
+  animation: holo-float-3 35s ease-in-out infinite;
+}
+
+@keyframes holo-float-1 {
+  0%, 100% {
+    transform: skewX(-3deg) rotate(1deg) translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+  25% {
+    transform: skewX(-3deg) rotate(1deg) translateY(-15px) translateX(10px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: skewX(-3deg) rotate(1deg) translateY(0) translateX(20px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: skewX(-3deg) rotate(1deg) translateY(10px) translateX(10px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes holo-float-2 {
+  0%, 100% {
+    transform: skewX(3deg) rotate(-2deg) translateY(0) translateX(0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: skewX(3deg) rotate(-2deg) translateY(-20px) translateX(-15px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: skewX(3deg) rotate(-2deg) translateY(0) translateX(-25px);
+    opacity: 0.7;
+  }
+  75% {
+    transform: skewX(3deg) rotate(-2deg) translateY(15px) translateX(-10px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes holo-float-3 {
+  0%, 100% {
+    transform: skewY(-2deg) rotate(1.5deg) translateY(0) translateX(0);
+    opacity: 0.5;
+  }
+  25% {
+    transform: skewY(-2deg) rotate(1.5deg) translateY(-10px) translateX(15px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: skewY(-2deg) rotate(1.5deg) translateY(0) translateX(25px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: skewY(-2deg) rotate(1.5deg) translateY(12px) translateX(20px);
+    opacity: 0.7;
+  }
+}
+
+/* Data Wave Patterns */
+.data-waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: 
+    linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(0, 200, 220, 0.2) 15%, 
+      transparent 30%, 
+      rgba(100, 150, 255, 0.2) 45%, 
+      transparent 60%, 
+      rgba(0, 150, 200, 0.2) 75%, 
+      transparent 90%);
+  background-size: 300% 100%;
+  animation: wave-pulse 8s linear infinite;
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+@keyframes wave-pulse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+/* Fiber Optic Streaks */
+.fiber-streaks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(120deg, transparent 0%, rgba(0, 200, 220, 0.1) 50%, transparent 100%),
+    linear-gradient(60deg, transparent 0%, rgba(100, 150, 255, 0.1) 50%, transparent 100%);
+  animation: streak-flow 15s linear infinite;
+}
+
+@keyframes streak-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Satellite HUD Overlays */
+.satellite-hud {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    conic-gradient(from 0deg at 50% 50%, 
+      rgba(0, 200, 220, 0.03) 0deg, 
+      rgba(100, 150, 255, 0.03) 120deg, 
+      rgba(0, 150, 200, 0.03) 240deg, 
+      rgba(0, 200, 220, 0.03) 360deg);
+  animation: hud-rotate 40s linear infinite;
+}
+
+@keyframes hud-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Deep Digital Shadows */
+.digital-shadows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 80%, rgba(0, 0, 0, 0.3) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 0, 0, 0.2) 0%, transparent 35%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.15) 0%, transparent 50%);
+  animation: shadow-drift 30s ease-in-out infinite;
+}
+
+@keyframes shadow-drift {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 15px 10px;
+  }
+  50% {
+    background-position: 30px 0;
+  }
+  75% {
+    background-position: 15px -10px;
+  }
+}
+
+/* Layered Holographic Depth */
+.depth-layers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(120deg, transparent 45%, rgba(255, 255, 255, 0.02) 50%, transparent 55%),
+    linear-gradient(60deg, transparent 47%, rgba(255, 255, 255, 0.01) 50%, transparent 53%);
+  animation: depth-shift 12s linear infinite;
+}
+
+@keyframes depth-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Clean Grid Geometry Enhancement */
+.geometry-enhancement {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 150, 200, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 150, 200, 0.03) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.3;
+}
+
+/* Ensure all elements are properly layered */
+.govcareai-bg * {
+  will-change: transform, opacity;
+}

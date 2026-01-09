@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "govcareai-frontend",
+  "public": true,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://your-backend-url-here.com/api/$1"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}

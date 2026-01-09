@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Complaint - GovCareAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <script src="js/view-complaint.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button class="nav-button" onclick="window.location.href='index.html'">HOME</button>
+        <h1 class="logo">GovCareAI</h1>
+        <button class="nav-button" onclick="Auth.handleLogout()">LOGOUT</button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section scroll-reveal">
+            <h2>Complaint Details</h2>
+            
+            <!-- Summary Stats -->
+            <div class="stats-grid" id="complaint-stats" style="display: none;">
+                <div class="stat-card glass-panel">
+                    <div class="stat-value stat-high">0</div>
+                    <div class="stat-label">HIGH PRIORITY</div>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <div class="stat-value stat-moderate">0</div>
+                    <div class="stat-label">MODERATE PRIORITY</div>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <div class="stat-value stat-low">0</div>
+                    <div class="stat-label">LOW PRIORITY</div>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <div class="stat-value stat-resolved">0</div>
+                    <div class="stat-label">RESOLVED</div>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <div class="stat-value stat-progress">0</div>
+                    <div class="stat-label">IN PROGRESS</div>
+                </div>
+                
+                <div class="stat-card glass-panel">
+                    <div class="stat-value stat-pending">0</div>
+                    <div class="stat-label">PENDING</div>
+                </div>
+            </div>
+            
+            <!-- Complaint Detail Container -->
+            <div id="complaint-detail-container">
+                <div class="loading-spinner"></div>
+                <p>Loading complaint details...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GovCareAI</h3>
+                <p>GovCareAI is a revolutionary platform that uses artificial intelligence to prioritize and manage civic complaints, ensuring urgent issues are addressed promptly.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@govcareai.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 GovCareAI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

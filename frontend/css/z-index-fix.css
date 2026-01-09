@@ -1,0 +1,41 @@
+/* Z-Index Fix for Backgrounds */
+/* Ensures proper layering of background elements */
+
+.cyberpunk-bg {
+  z-index: -2 !important;
+}
+
+.cyberpunk-bg-option {
+  z-index: -2 !important;
+}
+
+.govcareai-bg-option {
+  z-index: -2 !important;
+}
+
+.professional-bg {
+  z-index: -2 !important;
+}
+
+.default-bg {
+  z-index: -1 !important;
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1 !important;
+}
+
+.glass-panel {
+  z-index: 2 !important;
+}
+
+.nav-button, .neon-button {
+  z-index: 3 !important;
+}
+
+/* Ensure content is always above background */
+.content-overlay {
+  position: relative;
+  z-index: 10 !important;
+}

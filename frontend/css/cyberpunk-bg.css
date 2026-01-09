@@ -1,0 +1,683 @@
+/* Cyberpunk Background for GovCareAI */
+/* Enhanced visibility and intensity with security lines and blur effects */
+
+.cyberpunk-bg-option {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a14 0%, #0c0c1a 50%, #080810 100%);
+  display: none;
+}
+
+/* Cyberpunk Grid */
+.cyberpunk-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.8;
+}
+
+/* Circuit Pattern */
+.circuit-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, transparent 49%, rgba(189, 0, 255, 0.3) 50%, transparent 51%),
+    linear-gradient(transparent 49%, rgba(189, 0, 255, 0.3) 50%, transparent 51%);
+  background-size: 50px 50px;
+  opacity: 0.6;
+  animation: circuit-flow 15s linear infinite;
+}
+
+@keyframes circuit-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Energy Wave */
+.energy-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.2) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(189, 0, 255, 0.2) 0%, transparent 20%);
+  opacity: 0.7;
+  animation: energy-pulse 8s ease-in-out infinite;
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Neon Circuits */
+.neon-circuits {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    conic-gradient(from 0deg at 50% 50%, 
+      rgba(0, 243, 255, 0.1) 0deg, 
+      rgba(189, 0, 255, 0.1) 120deg, 
+      rgba(0, 255, 157, 0.1) 240deg, 
+      rgba(0, 243, 255, 0.1) 360deg);
+  animation: neon-rotate 25s linear infinite;
+}
+
+@keyframes neon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Voltage Sparks */
+.voltage-sparks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.spark {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #00f3ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+  animation: spark-pulse 3s infinite;
+}
+
+.spark:nth-child(1) {
+  top: 15%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.spark:nth-child(2) {
+  top: 70%;
+  left: 80%;
+  animation-delay: 1s;
+}
+
+.spark:nth-child(3) {
+  top: 40%;
+  left: 60%;
+  animation-delay: 2s;
+}
+
+.spark:nth-child(4) {
+  top: 85%;
+  left: 30%;
+  animation-delay: 0.5s;
+}
+
+.spark:nth-child(5) {
+  top: 25%;
+  left: 70%;
+  animation-delay: 1.5s;
+}
+
+@keyframes spark-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* Digital Current */
+.digital-current {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(0, 243, 255, 0.3) 20%, 
+      transparent 40%, 
+      rgba(189, 0, 255, 0.3) 60%, 
+      transparent 80%);
+  background-size: 200% 100%;
+  animation: current-flow 10s linear infinite;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+@keyframes current-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Holo Pulse */
+.holo-pulse {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+  animation: holo-pulse-animation 6s infinite;
+}
+
+.holo-pulse:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0s;
+}
+
+.holo-pulse:nth-child(2) {
+  top: 60%;
+  left: 75%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 2s;
+}
+
+.holo-pulse:nth-child(3) {
+  top: 40%;
+  left: 60%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 4s;
+}
+
+@keyframes holo-pulse-animation {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Neon Fog */
+.neon-fog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 30% 40%, rgba(0, 243, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at 70% 60%, rgba(189, 0, 255, 0.1) 0%, transparent 40%);
+  animation: fog-drift 20s ease-in-out infinite;
+}
+
+@keyframes fog-drift {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 20px 15px;
+  }
+}
+
+/* Glass Reflections */
+.glass-reflections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(120deg, transparent 45%, rgba(255, 255, 255, 0.05) 50%, transparent 55%),
+    linear-gradient(60deg, transparent 47%, rgba(255, 255, 255, 0.03) 50%, transparent 53%);
+  animation: reflection-shift 15s linear infinite;
+}
+
+@keyframes reflection-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Light Rays */
+.light-rays {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 50% 50%, transparent 30%, rgba(0, 243, 255, 0.05) 70%, transparent 100%);
+  animation: ray-rotate 30s linear infinite;
+}
+
+@keyframes ray-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Waveform */
+.waveform {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: 
+    linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(0, 243, 255, 0.4) 10%, 
+      transparent 20%, 
+      rgba(189, 0, 255, 0.4) 30%, 
+      transparent 40%, 
+      rgba(0, 255, 157, 0.4) 50%, 
+      transparent 60%);
+  background-size: 300% 100%;
+  animation: wave-pulse 12s linear infinite;
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+@keyframes wave-pulse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+/* Motion Blur */
+.motion-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, transparent 48%, rgba(0, 243, 255, 0.1) 50%, transparent 52%);
+  animation: blur-shift 8s linear infinite;
+}
+
+@keyframes blur-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Depth Layer */
+.depth-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.3) 0%, transparent 60%);
+  animation: depth-pulse 15s ease-in-out infinite;
+}
+
+@keyframes depth-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Hologram Layers */
+.hologram-layer-1 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(189, 0, 255, 0.05));
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+  transform: skewX(-5deg);
+  animation: hologram-float-1 20s ease-in-out infinite;
+}
+
+.hologram-layer-2 {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 250px;
+  height: 180px;
+  background: linear-gradient(45deg, rgba(189, 0, 255, 0.1), rgba(0, 255, 157, 0.05));
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(189, 0, 255, 0.3);
+  transform: skewX(5deg);
+  animation: hologram-float-2 25s ease-in-out infinite reverse;
+}
+
+.hologram-layer-3 {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  width: 200px;
+  height: 250px;
+  background: linear-gradient(225deg, rgba(0, 255, 157, 0.1), rgba(0, 243, 255, 0.05));
+  border-radius: 6px;
+  box-shadow: 0 0 35px rgba(0, 255, 157, 0.3);
+  transform: skewY(-3deg);
+  animation: hologram-float-3 30s ease-in-out infinite;
+}
+
+@keyframes hologram-float-1 {
+  0%, 100% {
+    transform: skewX(-5deg) translateY(0);
+    opacity: 0.7;
+  }
+  25% {
+    transform: skewX(-5deg) translateY(-20px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: skewX(-5deg) translateY(0);
+    opacity: 0.8;
+  }
+  75% {
+    transform: skewX(-5deg) translateY(15px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes hologram-float-2 {
+  0%, 100% {
+    transform: skewX(5deg) translateY(0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: skewX(5deg) translateY(-25px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: skewX(5deg) translateY(0);
+    opacity: 0.7;
+  }
+  75% {
+    transform: skewX(5deg) translateY(20px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes hologram-float-3 {
+  0%, 100% {
+    transform: skewY(-3deg) translateY(0);
+    opacity: 0.5;
+  }
+  25% {
+    transform: skewY(-3deg) translateY(-15px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: skewY(-3deg) translateY(0);
+    opacity: 0.6;
+  }
+  75% {
+    transform: skewY(-3deg) translateY(18px);
+    opacity: 0.7;
+  }
+}
+
+/* Cyber Security Lines with Enhanced Blur */
+.security-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.security-line-horizontal {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.8), transparent);
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.7);
+  animation: line-move-horizontal 20s linear infinite;
+  filter: blur(1.5px);
+}
+
+.security-line-vertical {
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(189, 0, 255, 0.8), transparent);
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.7);
+  animation: line-move-vertical 25s linear infinite;
+  filter: blur(1.5px);
+}
+
+.security-line-diagonal-1 {
+  position: absolute;
+  width: 3px;
+  height: 150%;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 157, 0.7), transparent);
+  box-shadow: 0 0 12px rgba(0, 255, 157, 0.6);
+  animation: line-move-diagonal-1 30s linear infinite;
+  filter: blur(1.5px);
+  transform: rotate(30deg);
+}
+
+.security-line-diagonal-2 {
+  position: absolute;
+  width: 3px;
+  height: 150%;
+  background: linear-gradient(135deg, transparent, rgba(255, 0, 170, 0.7), transparent);
+  box-shadow: 0 0 12px rgba(255, 0, 170, 0.6);
+  animation: line-move-diagonal-2 35s linear infinite;
+  filter: blur(1.5px);
+  transform: rotate(-30deg);
+}
+
+/* Position security lines */
+.security-line-horizontal:nth-child(1) {
+  top: 10%;
+  left: 0;
+  width: 100%;
+  animation-delay: 0s;
+}
+
+.security-line-horizontal:nth-child(2) {
+  top: 30%;
+  left: 0;
+  width: 100%;
+  animation-delay: 3s;
+}
+
+.security-line-horizontal:nth-child(3) {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  animation-delay: 6s;
+}
+
+.security-line-horizontal:nth-child(4) {
+  top: 70%;
+  left: 0;
+  width: 100%;
+  animation-delay: 9s;
+}
+
+.security-line-vertical:nth-child(5) {
+  left: 15%;
+  top: 0;
+  height: 100%;
+  animation-delay: 2s;
+}
+
+.security-line-vertical:nth-child(6) {
+  left: 35%;
+  top: 0;
+  height: 100%;
+  animation-delay: 5s;
+}
+
+.security-line-vertical:nth-child(7) {
+  left: 65%;
+  top: 0;
+  height: 100%;
+  animation-delay: 8s;
+}
+
+.security-line-vertical:nth-child(8) {
+  left: 85%;
+  top: 0;
+  height: 100%;
+  animation-delay: 11s;
+}
+
+.security-line-diagonal-1:nth-child(9) {
+  top: -25%;
+  left: 10%;
+  animation-delay: 3s;
+}
+
+.security-line-diagonal-1:nth-child(10) {
+  top: -25%;
+  left: 40%;
+  animation-delay: 7s;
+}
+
+.security-line-diagonal-2:nth-child(11) {
+  top: -25%;
+  right: 10%;
+  animation-delay: 8s;
+}
+
+.security-line-diagonal-2:nth-child(12) {
+  top: -25%;
+  right: 40%;
+  animation-delay: 12s;
+}
+
+/* Security Line Animations */
+@keyframes line-move-horizontal {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes line-move-vertical {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes line-move-diagonal-1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(30deg) translateX(-100%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(30deg) translateX(100%);
+  }
+}
+
+@keyframes line-move-diagonal-2 {
+  0% {
+    transform: translate(50%, -50%) rotate(-30deg) translateX(100%);
+  }
+  100% {
+    transform: translate(50%, -50%) rotate(-30deg) translateX(-100%);
+  }
+}
+
+/* Security Data Points with Enhanced Visibility */
+.security-data-points {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.security-point {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00f3ff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00f3ff, 0 0 20px #00f3ff;
+  animation: point-pulse 4s infinite;
+  filter: blur(0.8px);
+}
+
+.security-point:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.security-point:nth-child(2) {
+  top: 30%;
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.security-point:nth-child(3) {
+  top: 60%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.security-point:nth-child(4) {
+  top: 80%;
+  left: 85%;
+  animation-delay: 3s;
+}
+
+.security-point:nth-child(5) {
+  top: 40%;
+  left: 45%;
+  animation-delay: 1.5s;
+}
+
+.security-point:nth-child(6) {
+  top: 20%;
+  left: 60%;
+  animation-delay: 2.5s;
+}
+
+.security-point:nth-child(7) {
+  top: 70%;
+  left: 30%;
+  animation-delay: 3.5s;
+}
+
+@keyframes point-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
