@@ -2,6 +2,12 @@
 
 GovCareAI is a futuristic, production-level web application designed to revolutionize how citizens interact with government services by leveraging artificial intelligence to prioritize and manage civic complaints.
 
+## 🌐 Live Demo
+
+**GitHub Pages Link:** [https://akashguptapro9247-coder.github.io/govcareai](https://akashguptapro9247-coder.github.io/govcareai)
+
+> **Note:** The frontend is fully functional on GitHub Pages. For complete functionality including database operations, you'll need to deploy the backend separately.
+
 ## 🌟 Features
 
 ### Frontend (Client-Side)
