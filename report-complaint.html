@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Complaint - GovCareAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button class="nav-button" onclick="window.location.href='index.html'">HOME</button>
+        <h1 class="logo">GovCareAI</h1>
+        <button class="nav-button" onclick="Auth.handleLogout()">LOGOUT</button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section scroll-reveal">
+            <div class="glass-panel form-container">
+                <h2>Report a Complaint</h2>
+                <form id="complaint-form">
+                    <div class="form-group">
+                        <label for="title" class="form-label">Complaint Title</label>
+                        <input type="text" id="title" name="title" class="form-input" placeholder="Briefly describe your complaint" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea id="description" name="description" class="form-input" rows="5" placeholder="Provide detailed information about your complaint" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="longitude" class="form-label">Longitude</label>
+                        <input type="text" id="longitude" name="longitude" class="form-input" placeholder="Enter longitude">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="latitude" class="form-label">Latitude</label>
+                        <input type="text" id="latitude" name="latitude" class="form-input" placeholder="Enter latitude">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="street" class="form-label">Street Address</label>
+                        <input type="text" id="street" name="street" class="form-input" placeholder="Enter street address">
+                    </div>
+                    
+
+                    
+                    <div class="form-group">
+                        <label for="images" class="form-label">Upload Images</label>
+                        <input type="file" id="images" name="images" class="form-input" accept="image/*" multiple>
+                    </div>
+                    
+                    <button type="button" id="use-location" class="neon-button green">USE MY LOCATION</button>
+                    
+                    <button type="submit" class="neon-button" style="margin-top: 1rem;">SUBMIT COMPLAINT</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GovCareAI</h3>
+                <p>GovCareAI is a revolutionary platform that uses artificial intelligence to prioritize and manage civic complaints.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@govcareai.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/geolocation.js"></script>
+    <script src="js/auth.js"></script>
+    
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const userType = localStorage.getItem('userType');
+            
+            if (!isLoggedIn || userType !== 'citizen') {
+                // Redirect to login if not logged in as citizen
+                window.location.href = 'citizen-login.html';
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('complaint-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Log form data for debugging
+            console.log('Form data being submitted:');
+            for (let [key, value] of formData.entries()) {
+                console.log(key, value);
+            }
+            
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<div class="loading-spinner"></div> SUBMITTING...';
+            submitButton.disabled = true;
+            
+            try {
+                // Get token from localStorage
+                const token = localStorage.getItem('token');
+                
+                if (!token) {
+                    GovCareAI.showNotification('Authentication required. Please login again.', 'error');
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                    return;
+                }
+                
+                // Submit complaint to backend
+                console.log('Sending request to /api/complaints with token:', token);
+                const response = await fetch('/api/complaints', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: formData
+                });
+                
+                console.log('Response status:', response.status);
+                
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                if (response.ok) {
+                    GovCareAI.showNotification('Complaint submitted successfully! Our AI is analyzing your complaint.', 'success');
+                    // Reset form
+                    this.reset();
+                } else {
+                    GovCareAI.showNotification(data.message || 'Failed to submit complaint: ' + response.status, 'error');
+                }
+            } catch (error) {
+                console.error('Complaint submission error:', error);
+                GovCareAI.showNotification('Failed to submit complaint. Please check your connection and try again.', 'error');
+            } finally {
+                // Restore button
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

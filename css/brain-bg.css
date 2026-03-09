@@ -1,0 +1,674 @@
+/* Ultra-Enhanced AI Vector Background for GovCareAI */
+/* Advanced cinematic AI vector design with dynamic neural network patterns */
+
+.digital-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000; /* Pure black HDR background */
+  z-index: -2;
+  overflow: hidden;
+}
+
+/* Dynamic Neural Network Grid */
+.neural-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 200, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.8;
+  animation: grid-pulse 15s infinite alternate;
+}
+
+@keyframes grid-pulse {
+  0% {
+    opacity: 0.6;
+    background-size: 60px 60px;
+  }
+  100% {
+    opacity: 0.9;
+    background-size: 65px 65px;
+  }
+}
+
+/* Advanced AI Circuit Network */
+.ai-circuits {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, transparent 49%, rgba(0, 240, 255, 0.4) 50%, transparent 51%),
+    linear-gradient(transparent 49%, rgba(0, 240, 255, 0.4) 50%, transparent 51%);
+  background-size: 80px 80px;
+  opacity: 0.6;
+  animation: circuit-flow 20s linear infinite, circuit-color 10s infinite alternate;
+}
+
+@keyframes circuit-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+}
+
+@keyframes circuit-color {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Intelligent Neural Pathways */
+.neural-pathway {
+  position: absolute;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 220, 255, 1) 50%, 
+    transparent 100%);
+  box-shadow: 0 0 20px rgba(0, 220, 255, 0.9);
+  border-radius: 3px;
+  animation: pathway-pulse 6s infinite alternate, pathway-move 12s infinite linear;
+}
+
+.pathway-1 { width: 250px; top: 20%; left: 5%; transform: rotate(20deg); }
+.pathway-2 { width: 200px; top: 35%; right: 10%; transform: rotate(-25deg); }
+.pathway-3 { width: 300px; top: 55%; left: 8%; transform: rotate(15deg); }
+.pathway-4 { width: 220px; top: 70%; right: 15%; transform: rotate(-30deg); }
+.pathway-5 { width: 180px; top: 85%; left: 20%; transform: rotate(10deg); }
+
+@keyframes pathway-pulse {
+  0% {
+    opacity: 0.7;
+    box-shadow: 0 0 15px rgba(0, 220, 255, 0.7);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(0, 220, 255, 1);
+  }
+}
+
+@keyframes pathway-move {
+  0% {
+    transform: translateX(0) rotate(20deg);
+  }
+  50% {
+    transform: translateX(20px) rotate(25deg);
+  }
+  100% {
+    transform: translateX(0) rotate(20deg);
+  }
+}
+
+/* Quantum AI Nodes */
+.ai-node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00e0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e0ff, 0 0 40px #00c8ff;
+  animation: node-glow 4s infinite, node-orbit 20s infinite linear;
+}
+
+.node-large { width: 15px; height: 15px; }
+.node-medium { width: 10px; height: 10px; }
+.node-small { width: 6px; height: 6px; }
+
+.node-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.node-2 { top: 30%; right: 25%; animation-delay: 1s; }
+.node-3 { top: 45%; left: 30%; animation-delay: 2s; }
+.node-4 { top: 60%; right: 20%; animation-delay: 3s; }
+.node-5 { top: 75%; left: 15%; animation-delay: 4s; }
+.node-6 { top: 90%; right: 30%; animation-delay: 5s; }
+
+@keyframes node-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes node-orbit {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(10px, 5px) scale(1.2);
+  }
+  50% {
+    transform: translate(5px, 10px) scale(1.3);
+  }
+  75% {
+    transform: translate(-5px, 5px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Neural Synapse Connections */
+.neural-connection {
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    rgba(0, 240, 255, 1) 50%, 
+    transparent 100%);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.8);
+  animation: connection-pulse 5s infinite alternate, connection-wave 8s infinite ease-in-out;
+}
+
+.connection-1 { height: 150px; top: 10%; left: 15%; }
+.connection-2 { height: 180px; top: 25%; right: 20%; }
+.connection-3 { height: 120px; top: 50%; left: 25%; }
+.connection-4 { height: 160px; top: 60%; right: 15%; }
+.connection-5 { height: 140px; top: 80%; left: 20%; }
+
+@keyframes connection-pulse {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes connection-wave {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Intelligent Data Particles */
+.data-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00f0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f0ff;
+  animation: particle-float 10s infinite linear, particle-glow 3s infinite alternate;
+}
+
+.particle-1 { top: 5%; left: 5%; animation-delay: 0s; }
+.particle-2 { top: 20%; right: 15%; animation-delay: 2s; }
+.particle-3 { top: 35%; left: 10%; animation-delay: 4s; }
+.particle-4 { top: 50%; right: 25%; animation-delay: 6s; }
+.particle-5 { top: 65%; left: 15%; animation-delay: 8s; }
+.particle-6 { top: 80%; right: 10%; animation-delay: 10s; }
+.particle-7 { top: 95%; left: 20%; animation-delay: 12s; }
+.particle-8 { top: 15%; right: 20%; animation-delay: 1s; }
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-glow {
+  0% {
+    box-shadow: 0 0 5px #00f0ff;
+  }
+  100% {
+    box-shadow: 0 0 20px #00f0ff;
+  }
+}
+
+/* Holographic Vector Patterns */
+.vector-pattern {
+  position: absolute;
+  border: 3px solid rgba(0, 220, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 220, 255, 0.4);
+  opacity: 0.7;
+  animation: pattern-rotate 15s linear infinite, pattern-pulse 8s infinite alternate;
+}
+
+.pattern-circle { 
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  top: 25%; 
+  right: 25%; 
+}
+
+.pattern-square { 
+  width: 120px; 
+  height: 120px; 
+  top: 65%; 
+  left: 10%; 
+  transform: rotate(45deg);
+}
+
+.pattern-triangle { 
+  width: 0; 
+  height: 0; 
+  border-left: 70px solid transparent; 
+  border-right: 70px solid transparent; 
+  border-bottom: 130px solid rgba(0, 220, 255, 0.5); 
+  top: 40%; 
+  left: 30%; 
+}
+
+.pattern-hexagon {
+  width: 100px;
+  height: 100px;
+  top: 75%;
+  right: 15%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+@keyframes pattern-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pattern-pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+
+/* Quantum Neural Core */
+.neural-core {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  background: 
+    radial-gradient(circle, 
+      rgba(0, 200, 255, 0.3) 0%, 
+      rgba(0, 170, 255, 0.2) 70%, 
+      transparent 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 200, 255, 0.6);
+  animation: core-pulse 8s infinite alternate, core-rotate 30s linear infinite;
+}
+
+@keyframes core-pulse {
+  0% {
+    opacity: 0.6;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+@keyframes core-rotate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Holographic Quantum Fields */
+.holo-field {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(50px);
+  animation: holo-pulse 10s infinite alternate, holo-move 15s infinite ease-in-out;
+}
+
+.holo-1 { 
+  width: 250px; 
+  height: 250px; 
+  background: rgba(0, 200, 255, 0.6); 
+  top: 15%; 
+  right: 30%; 
+}
+
+.holo-2 { 
+  width: 200px; 
+  height: 200px; 
+  background: rgba(0, 240, 255, 0.5); 
+  top: 75%; 
+  left: 25%; 
+}
+
+.holo-3 { 
+  width: 150px; 
+  height: 150px; 
+  background: rgba(0, 180, 255, 0.4); 
+  top: 50%; 
+  left: 15%; 
+}
+
+@keyframes holo-pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes holo-move {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -10px) scale(1.2);
+  }
+  50% {
+    transform: translate(10px, 20px) scale(1.3);
+  }
+  75% {
+    transform: translate(-15px, 10px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* AI Quantum Matrix */
+.ai-matrix {
+  position: absolute;
+  color: rgba(0, 220, 255, 0.2);
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  white-space: nowrap;
+  opacity: 0.6;
+  animation: matrix-scroll 15s linear infinite, matrix-glow 6s infinite alternate;
+}
+
+.matrix-1 { top: 5%; left: 5%; animation-delay: 0s; }
+.matrix-2 { top: 20%; left: 20%; animation-delay: 3s; }
+.matrix-3 { top: 40%; left: 10%; animation-delay: 6s; }
+.matrix-4 { top: 60%; left: 15%; animation-delay: 9s; }
+.matrix-5 { top: 80%; left: 8%; animation-delay: 12s; }
+.matrix-6 { top: 95%; left: 25%; animation-delay: 15s; }
+
+@keyframes matrix-scroll {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes matrix-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 220, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 220, 255, 0.8);
+  }
+}
+
+/* Energy Waves */
+.energy-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 200, 255, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 70% 60%, rgba(0, 240, 255, 0.1) 0%, transparent 30%);
+  animation: wave-pulse 12s infinite alternate;
+}
+
+@keyframes wave-pulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Digital Constellation */
+.constellation-point {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #00f0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00f0ff;
+  animation: constellation-blink 4s infinite;
+}
+
+.point-1 { top: 10%; left: 25%; }
+.point-2 { top: 25%; right: 30%; }
+.point-3 { top: 40%; left: 35%; }
+.point-4 { top: 55%; right: 25%; }
+.point-5 { top: 70%; left: 20%; }
+.point-6 { top: 85%; right: 35%; }
+
+@keyframes constellation-blink {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Connection Lines */
+.connection-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 220, 255, 0.6) 50%, 
+    transparent 100%);
+  animation: line-pulse 7s infinite alternate;
+}
+
+/* Enhanced Quantum Particles */
+.quantum-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 240, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.8);
+  animation: quantum-dance 8s infinite linear, quantum-fade 4s infinite alternate;
+}
+
+@keyframes quantum-dance {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -15px);
+  }
+  50% {
+    transform: translate(40px, 0);
+  }
+  75% {
+    transform: translate(20px, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes quantum-fade {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 1);
+  }
+}
+
+/* Digital Scan Lines */
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 220, 255, 0.6), 
+    transparent);
+  animation: scan-move 4s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 220, 255, 0.6);
+}
+
+@keyframes scan-move {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Holographic Grid Overlay */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 180, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-flow 20s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes grid-flow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, 40px);
+  }
+}
+
+/* Cyber Pulse Waves */
+.pulse-wave {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 220, 255, 0.3);
+  opacity: 0;
+  animation: pulse-expand 5s infinite;
+}
+
+@keyframes pulse-expand {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Floating Orbs */
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+    rgba(0, 220, 255, 0.8) 0%, 
+    rgba(0, 180, 255, 0.2) 70%, 
+    transparent 100%);
+  animation: orb-float 15s infinite ease-in-out, orb-glow 6s infinite alternate;
+  filter: blur(10px);
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, -20px);
+  }
+  50% {
+    transform: translate(0, -40px);
+  }
+  75% {
+    transform: translate(-30px, -20px);
+  }
+}
+
+@keyframes orb-glow {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.line-1 { width: 100px; top: 15%; left: 25%; transform: rotate(30deg); }
+.line-2 { width: 150px; top: 35%; right: 20%; transform: rotate(-45deg); }
+.line-3 { width: 120px; top: 60%; left: 15%; transform: rotate(60deg); }
+
+@keyframes line-pulse {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings - GovCareAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body class="admin-dashboard">
+    <!-- Header -->
+    <header>
+        <button class="nav-button" onclick="window.location.href='index.html'">HOME</button>
+        <h1 class="logo">GovCareAI</h1>
+        <div style="display: flex; gap: 10px;">
+            <button class="nav-button" onclick="window.location.href='admin-dashboard.html'">DASHBOARD</button>
+            <button class="nav-button" onclick="Auth.handleLogout()">LOGOUT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section scroll-reveal">
+            <h2>SYSTEM SETTINGS</h2>
+            <p>System Administration Panel</p>
+            
+            <div class="settings-container">
+                <div class="system-info-section">
+                    <h3>Database Connectivity</h3>
+                    <div class="info-item">
+                        <span class="info-label">Database Status:</span>
+                        <span class="info-value status-indicator" id="db-status">Checking...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Connection Pool:</span>
+                        <span class="info-value" id="db-pool">N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Tables:</span>
+                        <span class="info-value" id="db-tables">N/A</span>
+                    </div>
+                </div>
+                
+                <div class="system-info-section">
+                    <h3>API Connectivity</h3>
+                    <div class="info-item">
+                        <span class="info-label">API Status:</span>
+                        <span class="info-value status-indicator" id="api-status">Checking...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Response Time:</span>
+                        <span class="info-value" id="api-response">N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Active Endpoints:</span>
+                        <span class="info-value" id="api-endpoints">N/A</span>
+                    </div>
+                </div>
+                
+                <div class="system-info-section">
+                    <h3>System Performance</h3>
+                    <div class="info-item">
+                        <span class="info-label">Server Status:</span>
+                        <span class="info-value status-indicator" id="server-status">Checking...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Memory Usage:</span>
+                        <span class="info-value" id="memory-usage">N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">CPU Usage:</span>
+                        <span class="info-value" id="cpu-usage">N/A</span>
+                    </div>
+                </div>
+                
+                <div class="settings-actions">
+                    <button class="neon-button red" onclick="testDatabaseConnection()">TEST DB CONNECTION</button>
+                    <button class="neon-button blue" onclick="testApiEndpoints()">TEST API</button>
+                    <button class="neon-button green" onclick="refreshSystemInfo()">REFRESH</button>
+                </div>
+                
+                <div class="system-info-section">
+                    <h3>Database Management</h3>
+                    <div class="info-item">
+                        <span class="info-label">Total Citizens:</span>
+                        <span class="info-value" id="total-citizens">N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total Complaints:</span>
+                        <span class="info-value" id="total-complaints">N/A</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total Admins:</span>
+                        <span class="info-value" id="total-admins">N/A</span>
+                    </div>
+                </div>
+                
+                <div class="settings-actions">
+                    <button class="neon-button purple" onclick="loadDatabaseStats()">LOAD DB STATS</button>
+                    <button class="neon-button cyan" onclick="runDatabaseMaintenance()">MAINTENANCE</button>
+                    <button class="neon-button yellow" onclick="backupDatabase()">BACKUP DB</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GovCareAI</h3>
+                <p>GovCareAI is a revolutionary platform that uses artificial intelligence to prioritize and manage civic complaints.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@govcareai.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/settings.js"></script>
+    
+    <script>
+        // Check if user is logged in as admin
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const userType = localStorage.getItem('userType');
+            
+            if (!isLoggedIn || userType !== 'admin') {
+                // Redirect to admin login if not logged in as admin
+                window.location.href = 'admin-login.html';
+            }
+            
+            // Load system information after page loads
+            setTimeout(loadSystemInfo, 100);
+        });
+    </script>
+</body>
+</html>

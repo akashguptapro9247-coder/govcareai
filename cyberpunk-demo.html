@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Background Demo - GovCareAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cyberpunk-bg.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/z-index-fix.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header {
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00f3ff, #bd00ff, #00ff9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            animation: glow-pulse 3s infinite alternate;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(15, 15, 30, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(40, 40, 80, 0.5);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #00f3ff;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+        
+        .feature-card p {
+            color: #aaaaaa;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #00f3ff;
+            color: #00f3ff;
+            padding: 1rem 2.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            margin: 1rem;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            color: #777777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cyberpunk Background Composition -->
+    <div class="cyberpunk-bg">
+        <div class="cyberpunk-grid"></div>
+        <div class="circuit-pattern"></div>
+        <div class="energy-wave"></div>
+        <div class="neon-circuits"></div>
+        <div class="voltage-sparks">
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+        </div>
+        <div class="digital-current"></div>
+        <div class="holo-pulse"></div>
+        <div class="holo-pulse"></div>
+        <div class="holo-pulse"></div>
+        <div class="neon-fog"></div>
+        <div class="glass-reflections"></div>
+        <div class="light-rays"></div>
+        <div class="waveform"></div>
+        <div class="motion-blur"></div>
+        <div class="depth-layer"></div>
+        <div class="hologram-layer-1"></div>
+        <div class="hologram-layer-2"></div>
+        <div class="hologram-layer-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>GOVCAREAI</h1>
+            <p class="subtitle">Governing the Government with the Power of Artificial Intelligence</p>
+            <p>Experience our cinematic cyberpunk technology background</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>Neon Energy</h3>
+                <p>Immersive neon blue, purple, and green glowing energy effects that create a futuristic atmosphere.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Holographic Layers</h3>
+                <p>Floating holographic UI layers with depth and dimension for a truly three-dimensional experience.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Electric Circuits</h3>
+                <p>Intricate circuit patterns that fade into the darkness, simulating advanced technology systems.</p>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>Particle Simulation</h3>
+                <p>Glowing particle dust that moves dynamically, creating a living, breathing digital environment.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Light Diffusion</h3>
+                <p>Soft fog and ray tracing light diffusion effects for cinematic quality visuals.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Digital Pulses</h3>
+                <p>Waveform pulses and moving digital currents that simulate data flow through the system.</p>
+            </div>
+        </div>
+        
+        <div style="margin: 3rem 0;">
+            <a href="index.html" class="cta-button">Return to GovCareAI</a>
+        </div>
+        
+        <div class="footer">
+            <p>Ultra HD 4K Cinematic Background | 1920 × 1080 Resolution | Multi-Layer 3D Depth</p>
+            <p>Perfect for futuristic government AI interfaces</p>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

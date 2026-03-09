@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Login - GovCareAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button class="nav-button" onclick="window.location.href='index.html'">HOME</button>
+        <h1 class="logo">GovCareAI</h1>
+        <button class="nav-button" onclick="window.location.href='admin-login.html'">ADMIN LOGIN</button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section scroll-reveal">
+            <div class="glass-panel form-container">
+                <h2>Citizen Login</h2>
+                <form id="citizen-login-form">
+                    <div class="form-group">
+                        <label for="gmail" class="form-label">Email Address</label>
+                        <input type="email" id="gmail" name="gmail" class="form-input" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div style="position: relative;">
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                            <span class="password-toggle" onclick="togglePasswordVisibility('password')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--neon-blue);">👁️</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="neon-button">LOGIN</button>
+                </form>
+                
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="forgot-password.html" style="color: var(--neon-blue); text-decoration: none; display: block; margin-bottom: 1rem;">FORGOT PASSWORD?</a>
+                    <a href="citizen-register.html" style="color: var(--neon-purple); text-decoration: none;">NEW USER? REGISTER HERE</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GovCareAI</h3>
+                <p>GovCareAI is a revolutionary platform that uses artificial intelligence to prioritize and manage civic complaints.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@govcareai.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
